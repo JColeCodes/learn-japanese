@@ -9,9 +9,9 @@ function Main() {
             </p>
                 {Object.keys(pages).map(sect => (
                 <div key={sect} className='main-links'>
-                    <h3>{sect}</h3>
+                    <h3>{pages[sect].title}</h3>
                     <ul className='page-li' key={sect}>
-                        {pages[sect].map(page => (
+                        {pages[sect].pages.map(page => (
                             <Link to={`${page.path}`} key={page.path}>
                                 <li>
                                     {page.kanji_title && page.ja_title && <>

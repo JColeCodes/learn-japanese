@@ -1,8 +1,12 @@
 :root {
-  --white: #FFF;
-  --black: #000;
-  --gray: #BBB;
-  --red: #C41A09;
+  --light: #FFF;
+  --light-mid: #EAEAEA;
+  --dark: #0B0B0C;
+  --gray: #BDBFC1;
+  --gray-dark: #949597;
+  --red: #FA2714;
+  --blue: #0071BD;
+  --blue-darker: #015289;
 }
 
 * {
@@ -19,9 +23,9 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--light);
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  color: var(--black);
+  color: var(--dark);
   font-size: 16px;
   overflow-x: hidden;
   min-height: 100vh;
@@ -32,7 +36,7 @@ a, a:hover, button, button:hover, li, li:hover, img, img:hover, span, span:hover
 }
 
 a, button {
-  color: var(--red);
+  color: var(--blue);
   text-decoration: none;
   background: transparent;
   border: none;
@@ -40,7 +44,7 @@ a, button {
   font-family: 'Lato', sans-serif;
 }
 a:hover, button:hover {
-  color: var(--black);
+  color: var(--blue-darker);
   cursor: pointer;
 }
 ul {
@@ -90,12 +94,28 @@ p {
 header {
   padding: 30px;
 }
+header h1 {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-darker);
+}
+header img {
+  width: 60px;
+  margin-right: 10px;
+}
 nav {
-  margin-top: 10px;
+  margin-top: 5px;
+  font-size: 1.1em;
 }
 nav ul li {
   display: inline-block;
   margin: 0 5px;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 
@@ -108,6 +128,7 @@ nav ul li {
   font-size: 1.5em;
   text-align: center;
   margin: 15px 0;
+  font-weight: bold;
 }
 .page-li {
   display: flex;
@@ -130,7 +151,7 @@ nav ul li {
 .page-li li span {
   display: block;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--dark);
 }
 .page-li .kanji {
   font-size: 2.8em;
@@ -140,7 +161,7 @@ nav ul li {
 }
 .page-li .eng {
   font-style: italic;
-  color: var(--gray);
+  color: var(--gray-dark);
 }
 .page-li li:hover {
   transform: scale(1.05);
@@ -174,7 +195,7 @@ nav ul li {
 }
 .writing-chart .key {
   font-style: italic;
-  color: var(--gray);
+  color: var(--gray-dark);
   font-size: 1.3em;
 }
 
@@ -186,7 +207,7 @@ footer {
 }
 footer a, footer button {
   font-style: italic;
-  color: var(--black);
+  color: var(--dark);
 }
 footer ul li {
   display: inline-block;

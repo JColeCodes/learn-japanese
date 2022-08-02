@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 function Navigation({ pages }) {
-    const navPages = pages.filter(page => page.title !== 'Not Found');
+    const navPages = pages.filter(page => page.title !== 'Not Found' && !page.subpage);
     return (
         <nav>
             <ul>
