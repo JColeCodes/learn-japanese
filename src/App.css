@@ -1,6 +1,7 @@
 :root {
   --white: #FFF;
   --black: #000;
+  --gray: #BBB;
   --red: #C41A09;
 }
 
@@ -36,6 +37,7 @@ a, button {
   background: transparent;
   border: none;
   font-size: 1em;
+  font-family: 'Lato', sans-serif;
 }
 a:hover, button:hover {
   color: var(--black);
@@ -52,6 +54,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+p {
+  margin: 10px 0;
+}
+
 .center {
   text-align: center;
 }
@@ -63,10 +69,120 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.content {
+  width: 1200px; max-width: 100%;
+  text-align: center;
+}
+.main {
+  flex: 1;
+  text-align: left;
+}
+
+
+/* HEADER */
+header {
+  padding: 30px;
+}
+nav {
+  margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+
+/* PAGE LISTS */
+.main-links:not(:last-child) {
+  margin-bottom: 20px;
+}
+.main-links h3 {
+  text-transform: capitalize;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 15px 0;
+}
+.page-li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.page-li a {
+  display: flex;
+  align-items: stretch;
+}
+.page-li li {
+  text-align: center;
+  padding: 20px;
+  margin: 0 8px;
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-li li span {
+  display: block;
+  line-height: 1.2;
+  color: var(--black);
+}
+.page-li .kanji {
+  font-size: 2.8em;
+}
+.page-li .ja {
+  font-size: 1.8em;
+}
+.page-li .eng {
+  font-style: italic;
+  color: var(--gray);
+}
+.page-li li:hover {
+  transform: scale(1.05);
+}
+
+
+/* WRITING CHART */
+.writing-chart {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.writing-chart ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-between;
+}
+.writing-chart ul li {
+  padding: 10px;
+  border: 1px solid var(--gray);
+  margin: -1px 0 0 -1px;
+  text-align: center;
+}
+.writing-chart .char {
+  display: block;
+  font-size: 3.2em;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.writing-chart .key {
+  font-style: italic;
+  color: var(--gray);
+  font-size: 1.3em;
+}
+
 
 /* FOOTER */
 footer {
   font-style: italic;
+  padding: 20px;
 }
 footer a, footer button {
   font-style: italic;
