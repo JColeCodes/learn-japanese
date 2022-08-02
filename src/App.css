@@ -87,6 +87,7 @@ p {
 .main {
   flex: 1;
   text-align: left;
+  position: relative;
 }
 
 
@@ -112,6 +113,10 @@ nav {
 nav ul li {
   display: inline-block;
   margin: 0 5px;
+}
+nav ul li a.active {
+  pointer-events: none;
+  color: var(--blue-darker);
 }
 
 h2 {
@@ -220,4 +225,35 @@ footer ul li i {
 
 body.stop-transitions * {
   transition: none !important;
+}
+
+
+/* ADDITIONAL STYLING */
+::-moz-selection {
+  color: var(--light);
+  background: var(--blue-darker);
+}
+::selection {
+  color: var(--light);
+  background: var(--blue-darker);
+}
+
+
+/* PAGE TRANSITIONS */
+.fade-enter { 
+  transition: all 200ms;
+  opacity: 0;
+}
+.fade-enter-active, .fade-exit {
+  transition: all 200ms;
+  opacity: 1;
+}
+.fade-exit-active {
+  transition: all 200ms;
+  opacity: 0;
+}
+.fade-enter-active, .fade-exit-active{
+  position: absolute;
+  top: 0;
+  width: 1200px; max-width: 100%;
 }

@@ -7,7 +7,7 @@ function Navigation({ pages }) {
             <ul>
                 {navPages.map(({ title, path }) => (
                     <li key={path}>
-                        <NavLink to={path}>
+                        <NavLink to={path} className={ ({ isActive }) => isActive ? 'active' : undefined }>
                             {title}
                         </NavLink>
                     </li>
